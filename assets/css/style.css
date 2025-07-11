@@ -827,8 +827,15 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-bottom: 15px;
+  padding-left: 0;
 }
 
+.timeline-text:last-child {
+  margin-bottom: 0;
+}
 
 /**
  * skills 
@@ -1141,7 +1148,37 @@ main {
   filter: grayscale(1) invert(1);
 }
 
-.contact-form { margin-bottom: 10px; }
+.contact-form {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.contact-form .form-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contact-form .form-btn .whatsapp-icon {
+  font-size: 1.5em;
+  color: #25D366;
+  margin-right: 8px;
+}
+
+.contact-form .form-btn .phone-icon {
+  font-size: 1.5em;
+  color: #007AFF;
+  margin-right: 8px;
+}
+
+.contact-form .form-btn .email-icon {
+  font-size: 1.5em;
+  color: #EA4335;
+  margin-right: 8px;
+}
 
 .form-title { margin-bottom: 20px; }
 
