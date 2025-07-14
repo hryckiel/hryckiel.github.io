@@ -1038,18 +1038,18 @@ main {
 
 
 /*-----------------------------------*\
-  #BLOG
+  #SKILLS
 \*-----------------------------------*/
 
-.blog-posts { margin-bottom: 10px; }
+.skills-posts { margin-bottom: 10px; }
 
-.blog-posts-list {
+.skills-posts-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.blog-post-item > a {
+.skills-post-item > a {
   position: relative;
   background: var(--border-gradient-onyx);
   height: 100%;
@@ -1058,7 +1058,7 @@ main {
   z-index: 1;
 }
 
-.blog-post-item > a::before {
+.skills-post-item > a::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -1067,25 +1067,25 @@ main {
   z-index: -1;
 }
 
-.blog-banner-box {
+.skills-banner-box {
   width: 100%;
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.blog-banner-box img {
+.skills-banner-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+.skills-post-item > a:hover .skills-banner-box img { transform: scale(1.1); }
 
-.blog-content { padding: 15px; }
+.skills-content { padding: 15px; }
 
-.blog-meta {
+.skills-meta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1093,28 +1093,28 @@ main {
   margin-bottom: 10px;
 }
 
-.blog-meta :is(.blog-category, time) {
+.skills-meta :is(.skills-category, time) {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
 
-.blog-meta .dot {
+.skills-meta .dot {
   background: var(--light-gray-70);
   width: 4px;
   height: 4px;
   border-radius: 4px;
 }
 
-.blog-item-title {
+.skills-item-title {
   margin-bottom: 10px;
   line-height: 1.3;
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.skills-post-item > a:hover .skills-item-title { color: var(--orange-yellow-crayola); }
 
-.blog-text {
+.skills-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -1281,11 +1281,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PORTFOLIO, SKILLS 
    */
 
   .project-img,
-  .blog-banner-box { height: auto; }
+  .skills-banner-box { height: auto; }
 
 }
 
@@ -1540,14 +1540,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PORTFOLIO, SKILLS
    */
 
-  .project-img, .blog-banner-box { border-radius: 16px; }
+  .project-img, .skills-banner-box { border-radius: 16px; }
 
-  .blog-posts-list { gap: 30px; }
+  .skills-posts-list { gap: 30px; }
 
-  .blog-content { padding: 25px; }
+  .skills-content { padding: 25px; }
 
 
 
@@ -1659,9 +1659,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* portfolio and skills grid */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .project-list, .skills-posts-list { grid-template-columns: 1fr 1fr; }
 
 
 
@@ -1786,10 +1786,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * BLOG
+   * SKILLS
    */
 
-  .blog-banner-box { height: 230px; }
+  .skills-banner-box { height: 230px; }
 
 }
 
