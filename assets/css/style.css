@@ -757,9 +757,6 @@ main {
 .clients-item img:hover { filter: grayscale(0); }
 
 
-
-
-
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
@@ -962,11 +959,11 @@ main {
 
 .project-img {
   position: relative;
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: auto;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin: 0 auto;
 }
 
 .project-img::before {
@@ -1017,7 +1014,7 @@ main {
 .project-item > a:hover img { transform: scale(1.1); }
 
 .project-title,
-.project-category { margin-left: 10px; }
+.project-category { margin-left: 10px; text-align: center;}
 
 .project-title {
   color: var(--white-2);
