@@ -127,7 +127,7 @@
 
           <li class="social-item">
             <a href="https://www.credly.com/users/lukasz-hryckiewicz" class="social-link">
-              <ion-icon src="/assets/images/credly-icon.svg" style="font-size: 24px;"></ion-icon>
+              <ion-icon src="./assets/images/credly-icon.svg" style="font-size: 24px;"></ion-icon>
             </a>
           </li>
 
@@ -529,7 +529,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="personal">
-              <a href="#">
+              <a href="#" class="project-link" data-project="project-pages/homelab-k8s-cluster.html">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -906,6 +906,21 @@
     </div>
 
   </main>
+
+  <!--
+    - #PROJECT MODAL
+  -->
+  <div class="project-modal-container" data-project-modal>
+    <div class="project-modal-overlay" data-project-modal-overlay></div>
+    <div class="project-modal">
+      <button class="project-modal-close-btn" data-project-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="project-modal-content" data-project-modal-content>
+        <!-- Project content will be loaded here -->
+      </div>
+    </div>
+  </div>
 
   <!--
     - custom js link

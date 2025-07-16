@@ -117,3 +117,54 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+//-----------------------------------*\
+//  #PROJECT MODAL
+//\*-----------------------------------*/
+
+// Project modal variables
+const projectModal = document.querySelector("[data-project-modal]");
+const projectModalOverlay = document.querySelector("[data-project-modal-overlay]");
+const projectModalClose = document.querySelector("[data-project-modal-close]");
+const projectModalContent = document.querySelector("[data-project-modal-content]");
+const projectLinks = document.querySelectorAll(".project-link[data-project]");
+
+
+// Project modal toggle function
+const projectModalFunc = function () {
+  projectModal.classList.toggle("active");
+  document.body.style.overflow = projectModal.classList.contains("active") ? "hidden" : "";
+}
+
+// Load project content function
+const loadProjectContent = async function (projectFile) {
+  try {
+    const response = await fetch(projectFile);
+    const content = await response.text();
+    projectModalContent.innerHTML = content;
+    projectModalFunc();
+  } catch (error) {
+    console.error("Error loading project:", error);
+    projectModalContent.innerHTML = "<p>Error loading project content. This will work when deployed to GitHub Pages.</p>";
+    projectModalFunc();
+  }
+}
+
+// add click event to all project links
+for (let i = 0; i < projectLinks.length; i++) {
+  projectLinks[i].addEventListener("click", function (e) {
+    e.preventDefault();
+    const projectFile = this.getAttribute("data-project");
+    loadProjectContent(projectFile);
+  });
+}
+
+// add click event to modal close button and overlay
+projectModalClose.addEventListener("click", projectModalFunc);
+projectModalOverlay.addEventListener("click", projectModalFunc);
+
+// close modal with escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && projectModal.classList.contains("active")) {
+    projectModalFunc();
+  }
+});
